@@ -1,0 +1,109 @@
+﻿@using Portfolio.Models
+ @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers 
+@model ME
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <style>
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            margin-top: 50px;
+            background-color: #f9f9f9; 
+            border-radius: 10px; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+        }
+
+        
+        .about-text {
+            text-align: left;
+            margin-right: 50px; 
+            max-width: 600px;
+        }
+
+        
+        .about-text h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #333;
+            position: relative;
+        }
+
+        .about-text h1::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background-color: #ff6347; 
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+
+        
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .about-text p strong {
+            color: #ff6347; 
+        }
+
+        
+        .about-img img {
+            width: 400px; 
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+        }
+
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff7f50;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>
+                Hello, I’m <strong>@Model.Name</strong>, a @Model.Age-year-old Computer Science student at <strong>@Model.University</strong>, currently specializing in <strong>@Model.Specialization</strong>. I’ve always been passionate about technology and programming, and this passion has driven me to dive deep into web development, particularly backend technologies.
+            </p>
+            <p>
+                I’ve had the opportunity to enhance my skills through various training programs, including the <strong>Digital Egypt Builders Initiative</strong>, where I spent 6 months honing my technical and freelancing skills. I also completed a summer <strong>.NET training at the ITI</strong>, which deepened my understanding of web applications and frameworks.
+            </p>
+            <p>
+                With expertise in <strong>ASP.NET Core</strong>, <strong>MVC architecture</strong>, <strong>C#</strong>, <strong>JavaScript</strong>, and <strong>SQL</strong>, I’m dedicated to building robust, scalable web applications. I’m constantly learning new technologies and improving my problem-solving abilities to create efficient, user-friendly solutions.
+            </p>
+            <a asp-controller="Home" asp-action="ContactMe" class="btn">Contact Me</a> 
+        </div>
+        <div class="about-img">
+            <img src="~/Img/Ibrahem.jpg" alt="My Photo" />
+        </div>
+    </section>
+</body>

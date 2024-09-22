@@ -1,0 +1,128 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers 
+<head>
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+   
+    <style> 
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            margin-top: 50px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-text {
+            text-align: left;
+            margin-right: 50px;
+            max-width: 600px;
+        }
+
+        .project-text h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #333;
+            position: relative;
+        }
+
+        .project-text h1::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background-color: #ff6347;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+
+        .project-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .project-text p strong {
+            color: #ff6347;
+        }
+
+        .project-img img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+        }
+
+        .btn, .github-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-right: 10px; 
+            transition: background-color 0.3s ease;
+        }
+
+        .btn {
+            background-color: #ff6347;
+            color: #fff;
+        }
+
+        .btn:hover {
+            background-color: #ff7f50;
+        }
+
+        .github-btn {
+            background-color: #24292e;
+            color: #fff;
+        }
+
+        .github-btn:hover {
+            background-color: #3e444c;
+        }
+
+        .github-btn i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="project-text">
+            <h1>Project Details</h1>
+            <p>
+                <strong>Description:</strong>
+                This is my first personal portfolio project, built using the ASP.NET Core MVC framework. The project showcases my skills, projects, and experiences as a developer. It serves as a practical example of my proficiency in backend web development using the MVC architecture. The portfolio provides information about me, my projects, and a contact page.           
+            </p>
+            <p>
+                <strong>Key Features:</strong>
+            </p>
+            <ul>
+                <li>Dynamic pages displaying personal information, skills, and projects.</li>
+                <li>User-friendly interface with responsive design.</li>
+                <li>Built using C#, ASP.NET Core MVC, and Entity Framework for database management.</li>
+                <li>Integrated contact form for potential clients or employers.</li>
+                <li>Full support for adding and editing project details dynamically.</li>
+            </ul>
+            <div>
+                <a asp-controller="Home" asp-action="Projects" class="btn">Back to Projects</a>
+                <a href="https://github.com/ibrahemarafa/portfolio.git" class="github-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+        <div class="project-img">
+            <img src="~/Img/Portfolio.bmp" alt="Project 1">
+        </div>
+    </section>
+</body>
